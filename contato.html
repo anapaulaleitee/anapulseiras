@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Entre em contato!</title>
+        <link rel="icon" type="image/png" href="img/icone.jpg">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="bela.css">
+        <script language="javascript" type="text/javascript">
+            function validar(){
+                var nome = contato.nome.value;
+	            var rg = contato.rg.value;
+				var email = contato.email.value;				
+                var telefone = contato.telefone.value;
+            
+                if(nome=="")
+                {
+                    alert('Digite seu nome');
+                    contato.nome.focus();
+                    return false;
+                }
+                if(rg=="")
+                {
+                    alert('Digite seu RG');
+                    contato.rg.focus();
+                    return false;
+                }
+				
+				if(email=="")
+                {
+                    alert('Digite seu email');
+                    contato.email.focus();
+                    return false;
+                }
+              
+                if(telefone=="")
+                {
+                    alert('Digite seu telefone');
+                    contato.telefone.focus();
+                    return false;
+                }
+                if(nome.length<5)
+                {
+                    alert('Digite seu nome completo');
+                    contato.nome.focus();
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body class="anaa">
+		<br>
+		<header>
+			<nav>
+				<ul> 
+					<li> <a href="index.html">Home</a> </li>
+					<li> <a href="sobre.html">Sobre</a> </li>
+					<li> <a href="modelo.html">Modelo</a> </li>
+					<li> <a href="contato.html">Contato</a> </li>
+				</ul>
+			</nav>
+		</header>
+		<section>
+			<center>
+				<br><br><br><br><br>
+				<div class="cont">ENTRE EM CONTATO CONOSCO!</div>
+				<br><br>
+				<form class="conti" name="contato" action="contato2.html" method="post" >
+				   Nome: <input type="text" name="nome"><br><br><br>
+				   RG : <input type="text" name="rg">
+				   Email : <input type="email" name="email"><br><br><br>
+				   Telefone : <input type="number" name="telefone"><br><br><br>
+				   Comentário :<br><textarea cols="40" rows="5"></textarea><br><br><br>
+				   <input type="submit" onclick="return validar()" value="Enviar">
+				   <input type="reset" value="Limpar">
+				</form>
+			</center>
+		</section>
+		<footer>
+			<br><br><br>
+			<div class="roda">
+			<center><h5>Trabalho Acadêmico - Sem fins lucrativos</h5>
+			<center><h5>Ana Leite 2023 &copyTodos os direitos reservados</h5></center></div>
+		</footer>
+    </body>
+</html>
